@@ -8,6 +8,10 @@ namespace SampleSoapService.Services
     {
         [OperationContract]
         string InsertData(Employee data);
-        
+        [OperationContract]
+        List<Employee> GetDataByName(string name);
+        [OperationContract]
+        List<Employee> GetDataByDepartment(string department);
+
     }
 }

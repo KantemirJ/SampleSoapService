@@ -25,5 +25,31 @@ namespace SampleSoapService.Services
             }
             
         }
+        public List<Employee> GetDataByName(string name)
+        {
+            try
+            {
+                return _context.Employees.Where(e => e.Name == name).ToList();
+                
+            }
+            catch
+            {
+                return null;
+            }
+
+        }
+        public List<Employee> GetDataByDepartment(string department)
+        {
+            try
+            {
+                return _context.Employees.Where(e => e.Department == department).ToList();
+
+            }
+            catch
+            {
+                return null;
+            }
+
+        }
     }
 }
